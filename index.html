@@ -383,6 +383,11 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .obj,.tilt{transform:none!important}
 }
+
+.smap{border:1px solid var(--rule);background:#fbfaf6;padding:clamp(8px,1.4vw,16px);margin:0}
+.smap svg{display:block;width:100%;height:auto}
+.smap-cap{font-size:13px;line-height:1.85;color:var(--ink-2);margin-top:12px;max-width:64ch}
+.sites-note{font-size:13px;color:var(--ink-3);line-height:1.8;margin-top:18px}
 </style>
 </head>
 <body>
@@ -397,6 +402,7 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
       <a href="#/home" data-nav="home">主页</a>
       <a href="#/gallery" data-nav="gallery">白瓷文创</a>
       <a href="#/culture" data-nav="culture">德化窑文化</a>
+      <a href="#/sites" data-nav="sites">窑址介绍</a>
       <a href="#/project" data-nav="project">项目介绍</a>
       <a href="#/team" data-nav="team">团队介绍</a>
     </nav>
@@ -997,6 +1003,31 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
     </div>
   </section>
 
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="head">
+        <div class="head-txt">
+          <p class="kicker">窑址与水系</p>
+          <h2 class="title">窑为什么都长在溪边</h2>
+          <p class="lead">171 处窑址压在县域地图上，几乎都贴着两条溪走：浐溪与涌溪。这不是偶然——在没有电和机器的年代，水同时管着「磨土、淘泥、运瓷」三件最要紧的事。</p>
+        </div>
+      </div>
+      <div class="prose">
+        <p><strong>一、土要水来磨。</strong>德化的瓷土挖出来是硬块，必须粉碎、淘洗、沉淀才能制坯。古人沿溪筑渠引水，水冲水车，水车提石碓，一下一下把瓷土舂细，再进淘洗池分层沉淀。内坂瓷土加工作坊至今留着水碓坑、淘洗池与臼坑，石头垒的水渠长约一百米，渠首还有约十米长的石坝——一条溪，就是一条现成的生产线。</p>
+        <p><strong>二、柴要就近取。</strong>德化是福建的林区县，马尾松含油多、火力足。窑依山坡砌筑，一头扎进山里，一头对着溪谷：上山取柴、下溪取水，两头运距都压到最短。龙窑顺着山势往上升，坡度本身就是抽力，火才肯往前走。</p>
+        <p><strong>三、瓷要顺水走。</strong>德化的溪流分属两个水系：浐溪、涌溪属闽江水系，在水口汇成大樟溪，经永泰、闽侯入闽江到福州；南部则由挑工翻虎豹关到永春，换船走晋江东溪到泉州。水运量大、运费低、破损少，是外销瓷最有竞争力的那一段路。</p>
+      </div>
+      <div class="outcome">
+        <div><div class="n">100 m</div><div class="c">内坂作坊石砌水渠长度，渠首石坝约 10 m</div></div>
+        <div><div class="n">9·16·18</div><div class="c">内坂作坊水碓坑 / 淘洗池 / 臼坑数量</div></div>
+        <div><div class="n">101 km</div><div class="c">浐溪全长，境内最长河流，绕县境东南入大樟溪</div></div>
+        <div><div class="n">2 条</div><div class="c">出山路线：水口—大樟溪—闽江—福州；陆路—永春—晋江—泉州</div></div>
+      </div>
+      <p class="note">「从古窑址分布图上看，溪流所经过的区域，如国宝、浔中、盖德、三班等乡镇的古窑址群较密集」——《中国白·德化瓷：德化陶瓷基本知识》；作坊遗迹数据据泉州市人民政府德化窑址（尾林—内坂窑址、屈斗宫窑址）介绍。</p>
+    </div>
+  </section>
+
   <!-- 保护策略 -->
   <section class="section section--tight">
     <div class="wrap">
@@ -1077,6 +1108,30 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
     </div>
   </section>
 
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="head">
+        <div class="head-txt">
+          <p class="kicker">从土到瓷</p>
+          <h2 class="title">一窑瓷要过的八道关</h2>
+          <p class="lead">德化传统瓷业分七十二道大工序。把最要紧的一段拆开看：从山上的白泥，到出窑时那一声脆响。</p>
+        </div>
+      </div>
+      <ol class="chain">
+        <li><span class="n">01</span><span class="t">采土与陈腐<span>观音岐一带的高岭土含铁钛极少。土挖出来不能马上用，要堆在场里风吹雨淋，让它「醒」过来——马可·波罗记下的德化人，把土堆上三四十年都不翻动。</span></span></li>
+        <li><span class="n">02</span><span class="t">水碓粉碎<span>溪水引渠带动水车，水车提石碓，一下一下舂细。「千声水碓笑人间」，唐末归德场长颜仁郁写下的这声响，在德化的溪边响了一千年。</span></span></li>
+        <li><span class="n">03</span><span class="t">淘洗与沉淀<span>舂细的土浆进水池，搅动、静置：粗砂先沉，细泥后沉，分池一层层取，取的是最细的那道浆。</span></span></li>
+        <li><span class="n">04</span><span class="t">练泥与制坯<span>泥要反复揉练排气。圆器上轮盘拉坯，瓷塑靠模印、捏塑、堆贴——何朝宗留下的「一塑二修三烧」，先塑形，再修细，最后交给火。</span></span></li>
+        <li><span class="n">05</span><span class="t">修坯与施釉<span>半干时修足、修壁，薄胎处只有几毫米；白瓷讲究「釉薄而莹」，一层透明釉，透出胎本身的乳白。</span></span></li>
+        <li><span class="n">06</span><span class="t">装匣与装窑<span>器物装匣钵，垫饼、支圈隔开，防粘连、防落灰。龙窑自窑头向窑尾依次装坯，窑室之间砌挡火墙、留烟火孔，让火一路往山上走。</span></span></li>
+        <li><span class="n">07</span><span class="t">柴火烧成<span>投松柴，看焰色定火候：800℃ 以下焰心呈鸭蛋黄，800—1200℃ 焰尾转青白，1300℃ 以上焰尖泛琉璃色、釉开始流动。德化白瓷烧成温度约 1360—1420℃，一窑连烧 50—60 小时。</span></span></li>
+        <li><span class="n">08</span><span class="t">出窑与拣选<span>停火、闷窑、开窑。逐件看釉色、听声音——白如雪、润如玉、薄如纸、声如磬，一件成品才算过关。</span></span></li>
+      </ol>
+      <p class="note">工序与数据据《中国白·德化瓷：德化陶瓷基本知识》、泉州市人民政府德化窑址介绍、德化陶瓷博物馆公开资料；焰色判断与烧成时长为月记窑窑工实地记录。</p>
+    </div>
+  </section>
+
   <section class="section section--tight">
     <div class="wrap">
       <div class="quote">
@@ -1112,6 +1167,126 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
           <p><a class="head-link" href="#/gallery">看六件白瓷文创</a></p>
         </div>
       </div>
+    </div>
+  </section>
+</main>
+
+
+<!-- ===== 视图：窑址介绍 ===== -->
+<main id="view-sites" class="view">
+  <section class="section">
+    <div class="wrap">
+      <div class="head">
+        <div class="head-txt">
+          <p class="kicker">窑址介绍 · 空间分布</p>
+          <h2 class="title">171 处窑址，沿两条溪铺开</h2>
+          <p class="lead">《德化县文物志》记古窑址 239 处，三普名录登记 171 处，两套口径并存，本站分析以 171 处为底数。它们并不均匀地撒在山里，而是沿浐溪、涌溪两条河谷聚成带，再顺水出山。</p>
+        </div>
+      </div>
+      <figure class="smap">
+        <svg viewBox="0 0 1000 780" role="img" aria-label="德化县古窑址沿浐溪、涌溪两条水系分布的示意图">
+          <path d="M 300 95 Q 430 58 570 88 Q 706 112 782 182 Q 862 252 842 366 Q 822 478 754 566 Q 682 656 566 692 Q 448 728 348 688 Q 238 642 203 536 Q 163 424 197 300 Q 228 176 300 95 Z"
+                fill="#f5f3ec" stroke="#d9d6cb" stroke-width="1.4"/>
+          <text x="212" y="114" font-size="12" fill="#adaa9f">德化县域（示意）</text>
+
+          <path d="M 175 470 Q 250 455 330 432 Q 400 412 455 400 Q 520 388 575 352 Q 640 308 705 284 Q 760 266 800 250"
+                fill="none" stroke="#7c9791" stroke-width="6.5" stroke-linecap="round" stroke-opacity=".85"/>
+          <path d="M 300 142 Q 372 130 450 146 Q 520 160 590 180 Q 660 202 760 236 Q 800 250"
+                fill="none" stroke="#7c9791" stroke-width="5" stroke-linecap="round" stroke-opacity=".7"/>
+          <path d="M 800 250 Q 872 230 944 200" fill="none" stroke="#7c9791" stroke-width="4" stroke-linecap="round"/>
+          <path d="M 944 200 l -17 1 l 6 -6 l -6 6 l 6 6" fill="none" stroke="#7c9791" stroke-width="3"/>
+          <text x="846" y="176" font-size="12" fill="#7c9791">大樟溪</text>
+          <text x="838" y="212" font-size="11.5" fill="#adaa9f">→ 永泰 · 闽江 · 福州港</text>
+
+          <path d="M 455 400 Q 495 470 512 545 Q 528 615 548 690" fill="none" stroke="#7c9791" stroke-width="3.4" stroke-opacity=".5"/>
+          <text x="556" y="712" font-size="11.5" fill="#adaa9f">→ 永春 · 晋江 · 泉州港</text>
+
+          <path d="M 430 404 Q 470 470 500 552 Q 524 620 552 686" fill="none" stroke="#9c4126" stroke-width="1.6" stroke-dasharray="7 6" stroke-opacity=".65"/>
+          <text x="380" y="600" font-size="11.5" fill="#9c4126" fill-opacity=".8">瓷帮古道（陆路）</text>
+
+          <text x="232" y="498" font-size="12.5" fill="#7c9791">浐溪</text>
+          <text x="472" y="122" font-size="12.5" fill="#7c9791">涌溪</text>
+          <text x="814" y="308" font-size="11.5" fill="#7c9791">水口 · 两溪汇合</text>
+
+          <polygon points="418,286 430,308 406,308" fill="#14151a" fill-opacity=".5"/>
+          <text x="438" y="302" font-size="12" fill="#adaa9f">戴云山 1856 m</text>
+
+<circle cx="704.3" cy="308.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="666.9" cy="279.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="725.5" cy="258.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="662.4" cy="308.0" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="216.9" cy="447.4" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="792.9" cy="272.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="252.1" cy="444.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="235.8" cy="470.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="424.5" cy="387.4" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="289.8" cy="455.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="303.2" cy="426.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="453.8" cy="382.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="321.5" cy="448.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="186.2" cy="442.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="630.9" cy="297.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="440.4" cy="391.5" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="528.6" cy="399.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="345.0" cy="419.4" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="645.6" cy="287.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="449.6" cy="379.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="574.5" cy="334.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="515.8" cy="414.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="193.5" cy="480.5" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="754.4" cy="240.5" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="458.9" cy="417.8" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="584.1" cy="355.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="403.7" cy="424.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="401.4" cy="427.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="592.0" cy="351.5" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="773.6" cy="271.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="723.6" cy="304.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="760.6" cy="258.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="761.3" cy="276.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="478.0" cy="371.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="708.3" cy="261.4" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="430.4" cy="424.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="265.7" cy="425.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="177.4" cy="455.0" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="394.1" cy="118.4" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="677.3" cy="190.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="313.2" cy="118.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="598.1" cy="198.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="567.7" cy="180.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="612.3" cy="173.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="345.4" cy="155.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="597.6" cy="170.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="444.4" cy="156.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="714.9" cy="209.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="676.3" cy="214.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="328.5" cy="127.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="553.5" cy="148.0" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="620.8" cy="173.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="625.0" cy="206.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="622.1" cy="182.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="333.1" cy="149.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="742" cy="274" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="772" cy="264" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="722" cy="296" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="686" cy="302" r="2.6" fill="#9c4126" opacity=".48"/>
+<circle cx="330" cy="432" r="6.4" fill="#9c4126"/><circle cx="330" cy="432" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="316" y="402" text-anchor="end" font-size="14" fill="#14151a">碗坪仑窑</text><text x="316" y="417" text-anchor="end" font-size="11.5" fill="#7c9791">盖德 · 宋</text><circle cx="455" cy="400" r="6.4" fill="#9c4126"/><circle cx="455" cy="400" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="437" y="370" text-anchor="end" font-size="14" fill="#14151a">屈斗宫窑</text><text x="437" y="385" text-anchor="end" font-size="11.5" fill="#7c9791">龙浔 · 元</text><circle cx="520" cy="424" r="6.4" fill="#9c4126"/><circle cx="520" cy="424" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="536" y="428" text-anchor="start" font-size="14" fill="#14151a">尾林—内坂窑</text><text x="536" y="443" text-anchor="start" font-size="11.5" fill="#7c9791">三班 · 宋元明清</text><circle cx="578" cy="350" r="6.4" fill="#9c4126"/><circle cx="578" cy="350" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="592" y="332" text-anchor="start" font-size="14" fill="#14151a">月记窑</text><text x="592" y="347" text-anchor="start" font-size="11.5" fill="#7c9791">三班蔡径 · 明</text><circle cx="508" cy="508" r="6.4" fill="#9c4126"/><circle cx="508" cy="508" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="522" y="512" text-anchor="start" font-size="14" fill="#14151a">辽田尖山窑</text><text x="522" y="527" text-anchor="start" font-size="11.5" fill="#7c9791">三班南 · 夏商</text><circle cx="288" cy="548" r="6.4" fill="#9c4126"/><circle cx="288" cy="548" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="274" y="548" text-anchor="end" font-size="14" fill="#14151a">墓林窑</text><text x="274" y="563" text-anchor="end" font-size="11.5" fill="#7c9791">美湖 · 晚唐五代</text><circle cx="402" cy="142" r="6.4" fill="#9c4126"/><circle cx="402" cy="142" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="416" y="178" text-anchor="start" font-size="14" fill="#14151a">上涌窑址群</text><text x="416" y="193" text-anchor="start" font-size="11.5" fill="#7c9791">上涌 · 宋元明清</text>
+
+          <g font-size="12" fill="#14151a">
+            <circle cx="70" cy="726" r="6" fill="#9c4126"/>
+            <text x="86" y="731">重点窑址（标名）</text>
+            <circle cx="248" cy="726" r="2.6" fill="#9c4126" opacity=".48"/>
+            <text x="262" y="731">一般窑址（示意，非逐处定位）</text>
+            <line x1="470" y1="726" x2="502" y2="726" stroke="#7c9791" stroke-width="5"/>
+            <text x="512" y="731">溪流与出山方向</text>
+            <line x1="686" y1="726" x2="718" y2="726" stroke="#9c4126" stroke-width="1.6" stroke-dasharray="7 6"/>
+            <text x="728" y="731">瓷帮古道</text>
+          </g>
+        </svg>
+        <p class="smap-cap">示意底图：县域轮廓、溪流走向与窑址点位均为示意表达，非测绘精度；点位按乡镇大致方位归置，用于呈现「沿溪成带」的整体格局。水系走向据《德化县中心城区排水防涝专项规划》与泉州市志河流资料。</p>
+      </figure>
+      <div class="prose" style="margin-top:clamp(24px,3.4vw,38px)">
+        <p><strong>两条溪，两条带。</strong>浐溪自戴云山南坡下来，经赤水、国宝、盖德、浔中、三班、南埕到水口，是境内最长的一条；涌溪绕北部上涌、葛坑、桂阳，到水口与浐溪汇合。窑址最密的一段，正是城关附近的浔中、龙浔、三班与西边的盖德——溪水在这里拐弯、落差又足够，取水、舂土、装窑、外运都省力。</p>
+        <p><strong>三种窑炉，一条谱系。</strong>早期是依山而建的斜坡式龙窑；元代的屈斗宫已把窑床分成 17 间窑室，靠挡火墙与烟火孔分段控火，俗称「鸡笼窑」；明清再演化为横室阶级窑，窑室一间高过一间，可以一窑一窑地烧。尾林窑在同一面山坡上把宋、元、明、清四种窑炉叠在一起，被称作「一眼千年」。</p>
+        <p><strong>分期的重心在移动。</strong>宋元窑址多在城关一带，明代向浔中、三班、葛坑集中，清代窑场遍及全县 18 个乡镇——窑跟着市场走，也一直跟着水和柴走。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="head">
+        <div class="head-txt">
+          <p class="kicker">重点窑址</p>
+          <h2 class="title">七处，从夏商到近代</h2>
+          <p class="lead">从 3700 年前的原始青瓷，到今天还在烧的柴窑，德化的窑火没有断过。</p>
+        </div>
+      </div>
+      <div class="method">
+        <div class="method-item">
+          <p class="method-n">夏商</p>
+          <h3>辽田尖山窑</h3>
+          <p>位于三班村南与永春交界的山坡。2007 年发现，2014—2015 年两次发掘，揭露 8 座龙窑遗迹，把德化的烧瓷史推到 3700 多年前。</p>
+        </div>
+        <div class="method-item">
+          <p class="method-n">晚唐五代</p>
+          <h3>墓林窑</h3>
+          <p>位于美湖乡洋田村，1995 年发现。长方形龙窑残长 21 米、宽 1.9—2.1 米；出青瓷碗、壶、盘、罐、花口洗，胎骨发灰、釉色青黄，是德化早期青瓷的样子。</p>
+        </div>
+        <div class="method-item">
+          <p class="method-n">宋</p>
+          <h3>碗坪仑窑</h3>
+          <p>位于盖德碗窑溪北岸。1966 年发现，1976 年发掘 87.25 平方米，上下两层堆积分属北宋与南宋，是德化青白瓷走向成熟的关键一环。</p>
+        </div>
+        <div class="method-item">
+          <p class="method-n">元</p>
+          <h3>屈斗宫窑</h3>
+          <p>位于龙浔宝美村破寨山南坡。1976 年发掘 1015 平方米，揭露分室龙窑一座：长 57.1 米、17 间窑室、坡度 12°—22°，出土器物标本 6793 件、工具 800 余件。1988 年列全国重点文物保护单位。</p>
+        </div>
+        <div class="method-item">
+          <p class="method-n">宋元明清</p>
+          <h3>尾林—内坂窑</h3>
+          <p>三班村上寮溪两岸隔溪相望。四座窑炉横跨宋、元、明、清，完整呈现龙窑—分室龙窑—横室阶级窑的演变；作坊区仍留水碓坑、淘洗池、臼坑与石砌水渠。2021 年随「泉州」列入世界遗产。</p>
+        </div>
+        <div class="method-item">
+          <p class="method-n">明 · 至今在烧</p>
+          <h3>月记窑</h3>
+          <p>三班蔡径村。始建于明万历四十七年（1619），窑长约 48 米、7 个窑门，两侧各 33 个投柴孔，一窑烧 50—60 小时，被称作德化柴烧窑炉的「活化石」。</p>
+        </div>
+        <div class="method-item">
+          <p class="method-n">清—近现代</p>
+          <h3>梅岭窑</h3>
+          <p>始建于清代，延续使用到近现代。它是德化从传统柴窑走向现代瓷业的过渡见证，也是窑址普查里数量最多的一类遗存。</p>
+        </div>
+        <div class="method-item">
+          <p class="method-n">怎么用这张图</p>
+          <h3>看图三步</h3>
+          <p>先看两条溪的走向，再看窑址点位是不是贴着溪走，最后看出山的两个箭头——水路往福州，陆路往泉州，一个县的窑场就这样接上了两个港口。</p>
+        </div>
+      </div>
+      <p class="sites-note">资料来源：《德化县文物志》、泉州市人民政府《德化窑址（尾林—内坂窑址、屈斗宫窑址）》介绍、福建博物院尾林窑考古发掘资料、《中国白·德化瓷：德化陶瓷基本知识》。</p>
     </div>
   </section>
 </main>
@@ -1453,34 +1628,12 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
           <div class="portrait"><img src="t_lu.jpg" alt="吕炼晨的肖像" loading="lazy"></div>
           <div class="who">
             <h3 class="p-name">吕炼晨</h3>
-            <p class="p-role">项目负责人</p>
+            <p class="p-role">项目创始人</p>
           </div>
           <div class="p-duty">
             <span>选题与统筹</span><span>器物三维建模</span><span>展页动效与验收</span>
           </div>
           <div class="tags"><span>城乡规划</span><span>三维建模</span><span>三维扫描</span></div>
-        </div>
-        <div class="person-row">
-          <div class="portrait"><img src="t_lin.jpg" alt="许冰婷的肖像" loading="lazy"></div>
-          <div class="who">
-            <h3 class="p-name">许冰婷</h3>
-            <p class="p-role">史料调研</p>
-          </div>
-          <div class="p-duty">
-            <span>资料收集整理</span><span>项目数据核对</span><span>项目文章撰写</span>
-          </div>
-          <div class="tags"><span>城乡规划</span><span>数据整理</span><span>图文校核</span></div>
-        </div>
-        <div class="person-row">
-          <div class="portrait"><img src="t_zhou.jpg" alt="视觉设计人选的占位肖像" loading="lazy"></div>
-          <div class="who">
-            <h3 class="p-name">暂定</h3>
-            <p class="p-role">视觉设计</p>
-          </div>
-          <div class="p-duty">
-            <span>人员与分工暂定</span>
-          </div>
-          <div class="tags"><span>暂定</span></div>
         </div>
         <div class="person-row">
           <div class="portrait"><img src="t_guo.jpg" alt="郭慧妮的肖像" loading="lazy"></div>
@@ -1503,6 +1656,28 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
             <span>项目支持</span><span>720 云全景</span><span>三维建模扫描</span>
           </div>
           <div class="tags"><span>城乡规划</span><span>正射成图</span><span>数据处理</span></div>
+        </div>
+        <div class="person-row">
+          <div class="portrait"><img src="t_lin.jpg" alt="许冰婷的肖像" loading="lazy"></div>
+          <div class="who">
+            <h3 class="p-name">许冰婷</h3>
+            <p class="p-role">史料调研</p>
+          </div>
+          <div class="p-duty">
+            <span>资料收集整理</span><span>项目数据核对</span><span>项目文章撰写</span>
+          </div>
+          <div class="tags"><span>城乡规划</span><span>数据整理</span><span>图文校核</span></div>
+        </div>
+        <div class="person-row">
+          <div class="portrait"><img src="t_zhou.jpg" alt="视觉设计人选的占位肖像" loading="lazy"></div>
+          <div class="who">
+            <h3 class="p-name">暂定</h3>
+            <p class="p-role">视觉设计</p>
+          </div>
+          <div class="p-duty">
+            <span>人员与分工暂定</span>
+          </div>
+          <div class="tags"><span>暂定</span></div>
         </div>
       </div>
 
@@ -1603,12 +1778,13 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
     gallery: '白瓷文创 · 窑址寻踪・瓷水共生',
     culture: '德化窑文化 · 窑址寻踪・瓷水共生',
     project: '项目介绍 · 窑址寻踪・瓷水共生',
-    team: '团队介绍 · 窑址寻踪・瓷水共生'
+    team: '团队介绍 · 窑址寻踪・瓷水共生',
+    sites: '窑址介绍 · 窑址寻踪・瓷水共生'
   };
   var VIEWS = Array.prototype.slice.call(document.querySelectorAll('.view'));
   var WORKS = Array.prototype.slice.call(document.querySelectorAll('.work'));
   var NAV = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
-  var ROUTE = { home: 'view-home', gallery: 'view-gallery', culture: 'view-culture', project: 'view-project', team: 'view-team' };
+  var ROUTE = { home: 'view-home', gallery: 'view-gallery', culture: 'view-culture', project: 'view-project', team: 'view-team', sites: 'view-sites' };
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var ONLINE_BASE = 'https://xcn11k9i1sd2.doubao.link/app/app_17hjsuxnt77';
