@@ -387,7 +387,33 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
 .smap{border:1px solid var(--rule);background:#fbfaf6;padding:clamp(8px,1.4vw,16px);margin:0}
 .smap svg{display:block;width:100%;height:auto}
 .smap-cap{font-size:13px;line-height:1.85;color:var(--ink-2);margin-top:12px;max-width:64ch}
+
+.smap-key{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;font-size:13px;line-height:1.7;color:var(--ink-2)}
+.smap-key span{white-space:nowrap}
+.smap-key b{font-family:var(--serif);color:var(--ember);font-weight:400;margin-right:5px}
+.smap-legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:12px;font-size:12.5px;color:var(--ink-3)}
 .sites-note{font-size:13px;color:var(--ink-3);line-height:1.8;margin-top:18px}
+
+.sites-num{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:clamp(22px,3vw,34px) 0 0}
+.sites-num div{padding:clamp(16px,2.2vw,26px) clamp(12px,2vw,24px);border-left:1px solid var(--rule)}
+.sites-num div:first-child{border-left:0;padding-left:0}
+.sites-num .n{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.1}
+.sites-num .c{font-size:13px;color:var(--ink-2);line-height:1.7;margin-top:8px}
+.sites-prose{max-width:70ch;margin-top:clamp(24px,3.2vw,36px);font-size:15px;line-height:1.95;color:var(--ink-2)}
+.sites-prose p{margin-bottom:14px}
+.sites-prose strong{color:var(--ink);font-weight:500}
+.sites-title{font-size:clamp(1.45rem,2.35vw,2rem);letter-spacing:.02em}
+.site-row{display:grid;grid-template-columns:96px minmax(0,.8fr) minmax(0,1.5fr);gap:clamp(14px,2.4vw,34px);padding:22px 0 22px;border-top:1px solid var(--rule);align-items:start}
+.site-row:last-of-type{border-bottom:1px solid var(--rule)}
+.site-era{font-family:var(--serif);font-size:13.5px;letter-spacing:.06em;color:var(--ember);padding-top:5px;line-height:1.6}
+.site-name{font-family:var(--serif);font-size:1.12rem;line-height:1.55;padding-top:1px}
+.site-desc{font-size:14px;line-height:1.9;color:var(--ink-2)}
+@media (max-width:760px){
+  .sites-num{grid-template-columns:repeat(2,1fr)}
+  .sites-num div:nth-child(3){border-left:0;padding-left:0}
+  .site-row{grid-template-columns:1fr;gap:6px}
+  .site-desc{font-size:13.5px}
+}
 </style>
 </head>
 <body>
@@ -1173,63 +1199,77 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
 
 
 <!-- ===== 视图：窑址介绍 ===== -->
+<!-- ===== 视图：窑址介绍 ===== -->
 <main id="view-sites" class="view">
   <section class="section">
     <div class="wrap">
       <div class="head">
-        <div class="head-txt">
+        <div class="head-txt" style="max-width:600px">
           <p class="kicker">窑址介绍 · 空间分布</p>
-          <h2 class="title">171 处窑址，沿两条溪铺开</h2>
-          <p class="lead">《德化县文物志》记古窑址 239 处，三普名录登记 171 处，两套口径并存，本站分析以 171 处为底数。它们并不均匀地撒在山里，而是沿浐溪、涌溪两条河谷聚成带，再顺水出山。</p>
+          <h2 class="title sites-title">171 处窑址，沿溪铺开</h2>
+          <p class="lead">《德化县文物志》记古窑址 239 处，三普名录登记 171 处，两套口径并存，本站分析以 171 处为底数。它们并不均匀地撒在山里：浐溪自西南向东北穿过城关，涌溪绕北部到水口汇合，三班的窑场则顺着上寮溪一条支流排开。</p>
         </div>
       </div>
+      <div class="sites-num">
+        <div><div class="n">171</div><div class="c">三普登记窑址，本站分析底数</div></div>
+        <div><div class="n">239</div><div class="c">《德化县文物志》所记，另一套口径</div></div>
+        <div><div class="n">3700</div><div class="c">年，辽田尖山原始青瓷至今</div></div>
+        <div><div class="n">7</div><div class="c">处重点窑址，单独介绍</div></div>
+      </div>
       <figure class="smap">
-        <svg viewBox="0 0 1000 780" role="img" aria-label="德化县古窑址沿浐溪、涌溪两条水系分布的示意图">
+        <svg viewBox="150 55 870 690" role="img" aria-label="德化县古窑址沿浐溪、涌溪与上寮溪分布的示意图">
           <path d="M 300 95 Q 430 58 570 88 Q 706 112 782 182 Q 862 252 842 366 Q 822 478 754 566 Q 682 656 566 692 Q 448 728 348 688 Q 238 642 203 536 Q 163 424 197 300 Q 228 176 300 95 Z"
-                fill="#f5f3ec" stroke="#d9d6cb" stroke-width="1.4"/>
-          <text x="212" y="114" font-size="12" fill="#adaa9f">德化县域（示意）</text>
+                fill="#f5f3ec" stroke="#dad7cc" stroke-width="1.3"/>
 
-          <path d="M 175 470 Q 250 455 330 432 Q 400 412 455 400 Q 520 388 575 352 Q 640 308 705 284 Q 760 266 800 250"
-                fill="none" stroke="#7c9791" stroke-width="6.5" stroke-linecap="round" stroke-opacity=".85"/>
-          <path d="M 300 142 Q 372 130 450 146 Q 520 160 590 180 Q 660 202 760 236 Q 800 250"
-                fill="none" stroke="#7c9791" stroke-width="5" stroke-linecap="round" stroke-opacity=".7"/>
-          <path d="M 800 250 Q 872 230 944 200" fill="none" stroke="#7c9791" stroke-width="4" stroke-linecap="round"/>
-          <path d="M 944 200 l -17 1 l 6 -6 l -6 6 l 6 6" fill="none" stroke="#7c9791" stroke-width="3"/>
-          <text x="846" y="176" font-size="12" fill="#7c9791">大樟溪</text>
-          <text x="838" y="212" font-size="11.5" fill="#adaa9f">→ 永泰 · 闽江 · 福州港</text>
+          <path d="M 215 505 Q 300 470 370 440 Q 460 418 560 352 Q 680 300 790 262"
+                fill="none" stroke="#7c9791" stroke-width="6" stroke-linecap="round" stroke-opacity=".8"/>
+          <path d="M 345 150 Q 430 152 520 176 Q 640 216 790 262"
+                fill="none" stroke="#7c9791" stroke-width="4.6" stroke-linecap="round" stroke-opacity=".6"/>
+          <path d="M 620 590 Q 600 545 583 505 Q 540 462 500 424 Q 468 414"
+                fill="none" stroke="#7c9791" stroke-width="3.2" stroke-linecap="round" stroke-opacity=".5"/>
+          <path d="M 790 262 Q 862 238 938 208" fill="none" stroke="#7c9791" stroke-width="4" stroke-linecap="round"/>
+          <path d="M 938 208 l -16 1 l 6 -6 l -6 6 l 6 6" fill="none" stroke="#7c9791" stroke-width="3"/>
 
-          <path d="M 455 400 Q 495 470 512 545 Q 528 615 548 690" fill="none" stroke="#7c9791" stroke-width="3.4" stroke-opacity=".5"/>
-          <text x="556" y="712" font-size="11.5" fill="#adaa9f">→ 永春 · 晋江 · 泉州港</text>
+<circle cx="558.8" cy="379.5" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="501.3" cy="370.2" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="610.1" cy="311.1" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="494.6" cy="404.4" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="744.1" cy="259.5" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="515.6" cy="360.1" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="283.0" cy="469.2" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="333.8" cy="432.9" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="667.4" cy="322.7" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="464.7" cy="424.1" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="573.5" cy="373.0" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="714.6" cy="309.6" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="213.1" cy="483.5" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="410.5" cy="455.0" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="224.2" cy="475.7" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="550.6" cy="342.0" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="695.7" cy="274.7" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="405.7" cy="456.3" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="219.0" cy="482.3" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="544.9" cy="373.2" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="524.5" cy="405.0" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="519.8" cy="368.7" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="308.9" cy="490.6" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="587.4" cy="315.3" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="569.2" cy="366.8" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="295.3" cy="461.1" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="594.9" cy="324.2" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="225.9" cy="481.0" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="406.9" cy="446.0" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="538.5" cy="355.9" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="704.5" cy="316.1" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="354.3" cy="456.5" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="455.6" cy="143.7" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="407.4" cy="169.8" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="365.2" cy="131.0" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="509.9" cy="189.4" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="394.2" cy="144.9" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="663.3" cy="241.9" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="404.7" cy="136.8" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="681.9" cy="246.6" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="452.6" cy="168.2" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="651.3" cy="205.4" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="584.9" cy="183.7" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="454.8" cy="170.2" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="584.7" cy="212.2" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="659.1" cy="201.0" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="497.1" cy="414.6" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="523.6" cy="427.1" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="596.4" cy="500.3" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="533.8" cy="471.1" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="605.9" cy="580.0" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="617.7" cy="551.0" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="550.9" cy="457.3" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="610.8" cy="547.5" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="772" cy="284" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="744" cy="302" r="2.5" fill="#9c4126" opacity=".4"/><circle cx="812" cy="270" r="2.5" fill="#9c4126" opacity=".4"/>
+<circle cx="345" cy="150" r="6.2" fill="#9c4126"/><circle cx="345" cy="150" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".28" stroke-width="1"/><circle cx="357" cy="138" r="9" fill="#fbfaf6" stroke="#9c4126" stroke-width="1"/><text x="357" y="142" text-anchor="middle" font-size="11.5" fill="#9c4126">1</text><circle cx="370" cy="440" r="6.2" fill="#9c4126"/><circle cx="370" cy="440" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".28" stroke-width="1"/><circle cx="356" cy="426" r="9" fill="#fbfaf6" stroke="#9c4126" stroke-width="1"/><text x="356" y="430" text-anchor="middle" font-size="11.5" fill="#9c4126">2</text><circle cx="472" cy="430" r="6.2" fill="#9c4126"/><circle cx="472" cy="430" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".28" stroke-width="1"/><circle cx="486" cy="442" r="9" fill="#fbfaf6" stroke="#9c4126" stroke-width="1"/><text x="486" y="446" text-anchor="middle" font-size="11.5" fill="#9c4126">3</text><circle cx="540" cy="462" r="6.2" fill="#9c4126"/><circle cx="540" cy="462" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".28" stroke-width="1"/><circle cx="554" cy="450" r="9" fill="#fbfaf6" stroke="#9c4126" stroke-width="1"/><text x="554" y="454" text-anchor="middle" font-size="11.5" fill="#9c4126">4</text><circle cx="583" cy="505" r="6.2" fill="#9c4126"/><circle cx="583" cy="505" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".28" stroke-width="1"/><circle cx="597" cy="515" r="9" fill="#fbfaf6" stroke="#9c4126" stroke-width="1"/><text x="597" y="519" text-anchor="middle" font-size="11.5" fill="#9c4126">5</text><circle cx="620" cy="590" r="6.2" fill="#9c4126"/><circle cx="620" cy="590" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".28" stroke-width="1"/><circle cx="634" cy="600" r="9" fill="#fbfaf6" stroke="#9c4126" stroke-width="1"/><text x="634" y="604" text-anchor="middle" font-size="11.5" fill="#9c4126">6</text><circle cx="268" cy="560" r="6.2" fill="#9c4126"/><circle cx="268" cy="560" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".28" stroke-width="1"/><circle cx="254" cy="548" r="9" fill="#fbfaf6" stroke="#9c4126" stroke-width="1"/><text x="254" y="552" text-anchor="middle" font-size="11.5" fill="#9c4126">7</text>
 
-          <path d="M 430 404 Q 470 470 500 552 Q 524 620 552 686" fill="none" stroke="#9c4126" stroke-width="1.6" stroke-dasharray="7 6" stroke-opacity=".65"/>
-          <text x="380" y="600" font-size="11.5" fill="#9c4126" fill-opacity=".8">瓷帮古道（陆路）</text>
+          <text x="266" y="470" font-size="11.5" fill="#7c9791">浐溪</text>
+          <text x="248" y="138" font-size="11.5" fill="#7c9791">涌溪</text>
+          <text x="612" y="556" font-size="11" fill="#7c9791" opacity=".85">上寮溪</text>
+          <text x="842" y="186" font-size="11" fill="#7c9791">大樟溪</text>
+          <text x="842" y="286" font-size="10.5" fill="#b3b0a5">→ 永泰 · 闽江 · 福州港</text>
 
-          <text x="232" y="498" font-size="12.5" fill="#7c9791">浐溪</text>
-          <text x="472" y="122" font-size="12.5" fill="#7c9791">涌溪</text>
-          <text x="814" y="308" font-size="11.5" fill="#7c9791">水口 · 两溪汇合</text>
+          <text x="446" y="372" font-size="11" fill="#b3b0a5">浔中 · 城关</text>
+          <text x="812" y="242" font-size="11" fill="#b3b0a5">水口</text>
 
-          <polygon points="418,286 430,308 406,308" fill="#14151a" fill-opacity=".5"/>
-          <text x="438" y="302" font-size="12" fill="#adaa9f">戴云山 1856 m</text>
+          <path d="M 660 606 Q 700 664 726 706" fill="none" stroke="#7c9791" stroke-width="3" stroke-opacity=".4"/>
+          <text x="740" y="700" font-size="10.5" fill="#b3b0a5">→ 永春 · 晋江 · 泉州港</text>
 
-<circle cx="704.3" cy="308.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="666.9" cy="279.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="725.5" cy="258.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="662.4" cy="308.0" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="216.9" cy="447.4" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="792.9" cy="272.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="252.1" cy="444.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="235.8" cy="470.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="424.5" cy="387.4" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="289.8" cy="455.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="303.2" cy="426.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="453.8" cy="382.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="321.5" cy="448.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="186.2" cy="442.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="630.9" cy="297.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="440.4" cy="391.5" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="528.6" cy="399.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="345.0" cy="419.4" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="645.6" cy="287.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="449.6" cy="379.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="574.5" cy="334.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="515.8" cy="414.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="193.5" cy="480.5" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="754.4" cy="240.5" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="458.9" cy="417.8" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="584.1" cy="355.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="403.7" cy="424.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="401.4" cy="427.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="592.0" cy="351.5" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="773.6" cy="271.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="723.6" cy="304.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="760.6" cy="258.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="761.3" cy="276.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="478.0" cy="371.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="708.3" cy="261.4" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="430.4" cy="424.9" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="265.7" cy="425.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="177.4" cy="455.0" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="394.1" cy="118.4" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="677.3" cy="190.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="313.2" cy="118.2" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="598.1" cy="198.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="567.7" cy="180.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="612.3" cy="173.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="345.4" cy="155.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="597.6" cy="170.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="444.4" cy="156.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="714.9" cy="209.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="676.3" cy="214.7" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="328.5" cy="127.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="553.5" cy="148.0" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="620.8" cy="173.6" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="625.0" cy="206.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="622.1" cy="182.3" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="333.1" cy="149.1" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="742" cy="274" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="772" cy="264" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="722" cy="296" r="2.6" fill="#9c4126" opacity=".48"/><circle cx="686" cy="302" r="2.6" fill="#9c4126" opacity=".48"/>
-<circle cx="330" cy="432" r="6.4" fill="#9c4126"/><circle cx="330" cy="432" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="316" y="402" text-anchor="end" font-size="14" fill="#14151a">碗坪仑窑</text><text x="316" y="417" text-anchor="end" font-size="11.5" fill="#7c9791">盖德 · 宋</text><circle cx="455" cy="400" r="6.4" fill="#9c4126"/><circle cx="455" cy="400" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="437" y="370" text-anchor="end" font-size="14" fill="#14151a">屈斗宫窑</text><text x="437" y="385" text-anchor="end" font-size="11.5" fill="#7c9791">龙浔 · 元</text><circle cx="520" cy="424" r="6.4" fill="#9c4126"/><circle cx="520" cy="424" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="536" y="428" text-anchor="start" font-size="14" fill="#14151a">尾林—内坂窑</text><text x="536" y="443" text-anchor="start" font-size="11.5" fill="#7c9791">三班 · 宋元明清</text><circle cx="578" cy="350" r="6.4" fill="#9c4126"/><circle cx="578" cy="350" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="596" y="374" text-anchor="start" font-size="14" fill="#14151a">月记窑</text><text x="596" y="389" text-anchor="start" font-size="11.5" fill="#7c9791">三班蔡径 · 明</text><circle cx="508" cy="508" r="6.4" fill="#9c4126"/><circle cx="508" cy="508" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="522" y="512" text-anchor="start" font-size="14" fill="#14151a">辽田尖山窑</text><text x="522" y="527" text-anchor="start" font-size="11.5" fill="#7c9791">三班南 · 夏商</text><circle cx="288" cy="548" r="6.4" fill="#9c4126"/><circle cx="288" cy="548" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="274" y="548" text-anchor="end" font-size="14" fill="#14151a">墓林窑</text><text x="274" y="563" text-anchor="end" font-size="11.5" fill="#7c9791">美湖 · 晚唐五代</text><circle cx="402" cy="142" r="6.4" fill="#9c4126"/><circle cx="402" cy="142" r="10.5" fill="none" stroke="#9c4126" stroke-opacity=".3" stroke-width="1"/><text x="416" y="178" text-anchor="start" font-size="14" fill="#14151a">上涌窑址群</text><text x="416" y="193" text-anchor="start" font-size="11.5" fill="#7c9791">上涌 · 宋元明清</text>
+          <path d="M 480 436 Q 545 505 585 585 Q 610 645 632 700" fill="none" stroke="#9c4126" stroke-width="1.5" stroke-dasharray="7 6" stroke-opacity=".55"/>
 
-          <g font-size="12" fill="#14151a">
-            <circle cx="70" cy="726" r="6" fill="#9c4126"/>
-            <text x="86" y="731">重点窑址（标名）</text>
-            <circle cx="248" cy="726" r="2.6" fill="#9c4126" opacity=".48"/>
-            <text x="262" y="731">一般窑址（示意，非逐处定位）</text>
-            <line x1="470" y1="726" x2="502" y2="726" stroke="#7c9791" stroke-width="5"/>
-            <text x="512" y="731">溪流与出山方向</text>
-            <line x1="686" y1="726" x2="718" y2="726" stroke="#9c4126" stroke-width="1.6" stroke-dasharray="7 6"/>
-            <text x="728" y="731">瓷帮古道</text>
-          </g>
+          <polygon points="415,300 427,322 403,322" fill="#14151a" fill-opacity=".42"/>
+          <text x="436" y="316" font-size="10.5" fill="#b3b0a5">戴云山 1856 m</text>
         </svg>
-        <p class="smap-cap">示意底图：县域轮廓、溪流走向与窑址点位均为示意表达，非测绘精度；点位按乡镇大致方位归置，用于呈现「沿溪成带」的整体格局。水系走向据《德化县中心城区排水防涝专项规划》与泉州市志河流资料。</p>
+        <div class="smap-key">
+          <span><b>1</b>上涌窑址群 · 上涌</span>
+          <span><b>2</b>碗坪仑窑 · 盖德（宋）</span>
+          <span><b>3</b>屈斗宫窑 · 龙浔宝美（元）</span>
+          <span><b>4</b>月记窑 · 三班蔡径（明，至今在烧）</span>
+          <span><b>5</b>尾林—内坂窑 · 三班上寮溪（宋元明清）</span>
+          <span><b>6</b>辽田尖山窑 · 三班南（夏商）</span>
+          <span><b>7</b>墓林窑 · 美湖（晚唐五代）</span>
+        </div>
+        <div class="smap-legend">
+          <span>● 重点窑址（编号见上）</span>
+          <span>· 一般窑址（示意）</span>
+          <span>— 溪流与出山方向</span>
+          <span>┅ 瓷帮古道（陆路）</span>
+        </div>
+        <p class="smap-cap">示意图，非测绘精度：窑址点位按所属乡镇与溪流水系的大致方位归置，重点窑址以编号标出，名称见图下名录。底数取三普登记 171 处；水系据《德化县中心城区排水防涝专项规划》与泉州市志河流资料。</p>
       </figure>
-      <div class="prose" style="margin-top:clamp(24px,3.4vw,38px)">
-        <p><strong>两条溪，两条带。</strong>浐溪自戴云山南坡下来，经赤水、国宝、盖德、浔中、三班、南埕到水口，是境内最长的一条；涌溪绕北部上涌、葛坑、桂阳，到水口与浐溪汇合。窑址最密的一段，正是城关附近的浔中、龙浔、三班与西边的盖德——溪水在这里拐弯、落差又足够，取水、舂土、装窑、外运都省力。</p>
-        <p><strong>三种窑炉，一条谱系。</strong>早期是依山而建的斜坡式龙窑；元代的屈斗宫已把窑床分成 17 间窑室，靠挡火墙与烟火孔分段控火，俗称「鸡笼窑」；明清再演化为横室阶级窑，窑室一间高过一间，可以一窑一窑地烧。尾林窑在同一面山坡上把宋、元、明、清四种窑炉叠在一起，被称作「一眼千年」。</p>
+      <div class="sites-prose">
+        <p><strong>两条溪，两条带。</strong>浐溪由赤水发源，经国宝、盖德到城关，再折向东北的雷峰、南埕，最后在水口与涌溪汇成大樟溪；涌溪从西北的上涌、葛坑一路过来。窑址最密的一段，正是城关附近的浔中、龙浔、三班与西边的盖德——溪水在这里拐弯、落差又足够，取水、舂土、装窑、外运都省力。</p>
+        <p><strong>三种窑炉，一条谱系。</strong>早期是依山而建的斜坡式龙窑；元代屈斗宫把窑床分成 17 间窑室，靠挡火墙与烟火孔分段控火，俗称「鸡笼窑」；明清再演化为横室阶级窑，窑室一间高过一间。尾林窑在同一面山坡上把宋、元、明、清四朝窑炉叠在一起，被称作「一眼千年」。</p>
         <p><strong>分期的重心在移动。</strong>宋元窑址多在城关一带，明代向浔中、三班、葛坑集中，清代窑场遍及全县 18 个乡镇——窑跟着市场走，也一直跟着水和柴走。</p>
       </div>
     </div>
@@ -1244,48 +1284,43 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
           <p class="lead">从 3700 年前的原始青瓷，到今天还在烧的柴窑，德化的窑火没有断过。</p>
         </div>
       </div>
-      <div class="method">
-        <div class="method-item">
-          <p class="method-n">夏商</p>
-          <h3>辽田尖山窑</h3>
-          <p>位于三班村南与永春交界的山坡。2007 年发现，2014—2015 年两次发掘，揭露 8 座龙窑遗迹，把德化的烧瓷史推到 3700 多年前。</p>
-        </div>
-        <div class="method-item">
-          <p class="method-n">晚唐五代</p>
-          <h3>墓林窑</h3>
-          <p>位于美湖乡洋田村，1995 年发现。长方形龙窑残长 21 米、宽 1.9—2.1 米；出青瓷碗、壶、盘、罐、花口洗，胎骨发灰、釉色青黄，是德化早期青瓷的样子。</p>
-        </div>
-        <div class="method-item">
-          <p class="method-n">宋</p>
-          <h3>碗坪仑窑</h3>
-          <p>位于盖德碗窑溪北岸。1966 年发现，1976 年发掘 87.25 平方米，上下两层堆积分属北宋与南宋，是德化青白瓷走向成熟的关键一环。</p>
-        </div>
-        <div class="method-item">
-          <p class="method-n">元</p>
-          <h3>屈斗宫窑</h3>
-          <p>位于龙浔宝美村破寨山南坡。1976 年发掘 1015 平方米，揭露分室龙窑一座：长 57.1 米、17 间窑室、坡度 12°—22°，出土器物标本 6793 件、工具 800 余件。1988 年列全国重点文物保护单位。</p>
-        </div>
-        <div class="method-item">
-          <p class="method-n">宋元明清</p>
-          <h3>尾林—内坂窑</h3>
-          <p>三班村上寮溪两岸隔溪相望。四座窑炉横跨宋、元、明、清，完整呈现龙窑—分室龙窑—横室阶级窑的演变；作坊区仍留水碓坑、淘洗池、臼坑与石砌水渠。2021 年随「泉州」列入世界遗产。</p>
-        </div>
-        <div class="method-item">
-          <p class="method-n">明 · 至今在烧</p>
-          <h3>月记窑</h3>
-          <p>三班蔡径村。始建于明万历四十七年（1619），窑长约 48 米、7 个窑门，两侧各 33 个投柴孔，一窑烧 50—60 小时，被称作德化柴烧窑炉的「活化石」。</p>
-        </div>
-        <div class="method-item">
-          <p class="method-n">清—近现代</p>
-          <h3>梅岭窑</h3>
-          <p>始建于清代，延续使用到近现代。它是德化从传统柴窑走向现代瓷业的过渡见证，也是窑址普查里数量最多的一类遗存。</p>
-        </div>
-        <div class="method-item">
-          <p class="method-n">怎么用这张图</p>
-          <h3>看图三步</h3>
-          <p>先看两条溪的走向，再看窑址点位是不是贴着溪走，最后看出山的两个箭头——水路往福州，陆路往泉州，一个县的窑场就这样接上了两个港口。</p>
-        </div>
+
+      <div class="site-row">
+        <div class="site-era">夏商</div>
+        <div class="site-name">辽田尖山窑</div>
+        <div class="site-desc">三班村南、与永春交界的山坡。2007 年发现，2014—2015 年两次发掘，揭露 8 座龙窑遗迹，把德化的烧瓷史推到 3700 多年前。</div>
       </div>
+      <div class="site-row">
+        <div class="site-era">晚唐五代</div>
+        <div class="site-name">墓林窑</div>
+        <div class="site-desc">美湖乡洋田村，1995 年发现。长方形龙窑残长 21 米、宽 1.9—2.1 米；出青瓷碗、壶、盘、罐、花口洗，胎骨发灰、釉色青黄，是德化早期青瓷的样子。</div>
+      </div>
+      <div class="site-row">
+        <div class="site-era">宋</div>
+        <div class="site-name">碗坪仑窑</div>
+        <div class="site-desc">盖德碗窑溪北岸。1966 年发现，1976 年发掘 87.25 平方米，上下两层堆积分属北宋与南宋，是德化青白瓷走向成熟的关键一环。</div>
+      </div>
+      <div class="site-row">
+        <div class="site-era">元</div>
+        <div class="site-name">屈斗宫窑</div>
+        <div class="site-desc">龙浔宝美村破寨山南坡，紧贴城关。1976 年发掘 1015 平方米，揭露分室龙窑一座：长 57.1 米、17 间窑室、坡度 12°—22°，出土器物标本 6793 件、工具 800 余件。1988 年列全国重点文物保护单位。</div>
+      </div>
+      <div class="site-row">
+        <div class="site-era">宋元明清</div>
+        <div class="site-name">尾林—内坂窑</div>
+        <div class="site-desc">三班村上寮溪两岸，隔溪相望。四座窑炉横跨宋、元、明、清，完整呈现龙窑—分室龙窑—横室阶级窑的演变；作坊区仍留水碓坑、淘洗池、臼坑与石砌水渠。2021 年随「泉州」列入世界遗产。</div>
+      </div>
+      <div class="site-row">
+        <div class="site-era">明</div>
+        <div class="site-name">月记窑</div>
+        <div class="site-desc">三班蔡径村，至今仍在烧。始建于明万历四十七年（1619），窑长约 48 米、7 个窑门，两侧各 33 个投柴孔，一窑烧 50—60 小时，被称作德化柴烧窑炉的「活化石」。</div>
+      </div>
+      <div class="site-row">
+        <div class="site-era">清 — 近现代</div>
+        <div class="site-name">梅岭窑</div>
+        <div class="site-desc">始建于清代，延续使用到近现代。它是德化从传统柴窑走向现代瓷业的过渡见证，也是窑址普查里数量最多的一类遗存。</div>
+      </div>
+
       <p class="sites-note">资料来源：《德化县文物志》、泉州市人民政府《德化窑址（尾林—内坂窑址、屈斗宫窑址）》介绍、福建博物院尾林窑考古发掘资料、《中国白·德化瓷：德化陶瓷基本知识》。</p>
     </div>
   </section>
