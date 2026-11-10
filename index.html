@@ -414,6 +414,22 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
   .site-row{grid-template-columns:1fr;gap:6px}
   .site-desc{font-size:13.5px}
 }
+
+.label h1{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0}
+.label h1 span.vb-name{display:inline}
+.voice-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 12px;border:1px solid var(--rule-2);border-radius:999px;background:rgba(255,255,255,.55);color:var(--ink-2);font-family:var(--sans);font-size:12.5px;letter-spacing:.05em;line-height:1;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.voice-btn:hover{border-color:var(--celadon);color:var(--ink)}
+.voice-btn:focus-visible{outline:2px solid var(--celadon);outline-offset:3px}
+.voice-btn.is-on{border-color:var(--ember);color:var(--ember);background:rgba(156,65,38,.07)}
+.voice-btn svg{width:15px;height:15px;flex:none;display:block}
+.vb-wave{display:none;align-items:flex-end;gap:2px;height:12px;margin-left:2px}
+.voice-btn.is-on .vb-wave{display:inline-flex}
+.voice-btn.is-on .vb-wave i{display:block;width:2px;background:var(--ember);animation:vbars .9s ease-in-out infinite}
+.vb-wave i:nth-child(1){height:5px;animation-delay:0s}
+.vb-wave i:nth-child(2){height:10px;animation-delay:.15s}
+.vb-wave i:nth-child(3){height:7px;animation-delay:.3s}
+@keyframes vbars{0%,100%{transform:scaleY(.45)}50%{transform:scaleY(1)}}
+@media (max-width:560px){.label-name{gap:10px}.voice-btn{padding:7px 11px;font-size:12px}}
 </style>
 </head>
 <body>
@@ -691,7 +707,7 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
       </div>
       <aside class="label">
         <p class="label-idx">器物 01 · 瓷塑</p>
-        <h1>叠羽 · 白瓷人偶</h1>
+        <h1>叠羽 · 白瓷人偶<button class="voice-btn" type="button" data-voice="yuebai" aria-pressed="false" aria-label="播放本件器物的语音介绍"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h3l5-4v14l-5-4H4z"/><path d="M16 8.6a5 5 0 0 1 0 6.8"/><path d="M19 6a8.6 8.6 0 0 1 0 12"/></svg><span>听介绍</span><em class="vb-wave" aria-hidden="true"><i></i><i></i><i></i></em></button></h1>
         <p class="label-quote">「羽衣不飞，只把风留在褶里。」</p>
         <dl class="spec">
           <dt>材质</dt><dd>象牙白瓷 · 涩口素面，翎羽薄处可透光</dd>
@@ -731,7 +747,7 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
       </div>
       <aside class="label">
         <p class="label-idx">器物 02 · 瓷塑</p>
-        <h1>延平 · 郑成功瓷塑</h1>
+        <h1>延平 · 郑成功瓷塑<button class="voice-btn" type="button" data-voice="guanyin" aria-pressed="false" aria-label="播放本件器物的语音介绍"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h3l5-4v14l-5-4H4z"/><path d="M16 8.6a5 5 0 0 1 0 6.8"/><path d="M19 6a8.6 8.6 0 0 1 0 12"/></svg><span>听介绍</span><em class="vb-wave" aria-hidden="true"><i></i><i></i><i></i></em></button></h1>
         <p class="label-quote">「一人一马停在风起处，船还没开。」</p>
         <dl class="spec">
           <dt>材质</dt><dd>象牙白瓷 · 素胎不施釉</dd>
@@ -771,7 +787,7 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
       </div>
       <aside class="label">
         <p class="label-idx">器物 03 · 香器</p>
-        <h1>暗香 · 三足香炉</h1>
+        <h1>暗香 · 三足香炉<button class="voice-btn" type="button" data-voice="censer" aria-pressed="false" aria-label="播放本件器物的语音介绍"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h3l5-4v14l-5-4H4z"/><path d="M16 8.6a5 5 0 0 1 0 6.8"/><path d="M19 6a8.6 8.6 0 0 1 0 12"/></svg><span>听介绍</span><em class="vb-wave" aria-hidden="true"><i></i><i></i><i></i></em></button></h1>
         <p class="label-quote">「烟是看得见的时间。」</p>
         <dl class="spec">
           <dt>材质</dt><dd>德化白瓷 · 足端局部落灰</dd>
@@ -811,7 +827,7 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
       </div>
       <aside class="label">
         <p class="label-idx">器物 04 · 陈设</p>
-        <h1>惊鸿 · 凤凰弓</h1>
+        <h1>惊鸿 · 凤凰弓<button class="voice-btn" type="button" data-voice="flower" aria-pressed="false" aria-label="播放本件器物的语音介绍"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h3l5-4v14l-5-4H4z"/><path d="M16 8.6a5 5 0 0 1 0 6.8"/><path d="M19 6a8.6 8.6 0 0 1 0 12"/></svg><span>听介绍</span><em class="vb-wave" aria-hidden="true"><i></i><i></i><i></i></em></button></h1>
         <p class="label-quote">「弓不开，只把凤凰留在弦上。」</p>
         <dl class="spec">
           <dt>材质</dt><dd>象牙白瓷 · 通体素面，翎羽处薄至可透光</dd>
@@ -851,7 +867,7 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
       </div>
       <aside class="label">
         <p class="label-idx">器物 05 · 花器</p>
-        <h1>潮音 · 海丝梅瓶</h1>
+        <h1>潮音 · 海丝梅瓶<button class="voice-btn" type="button" data-voice="vase" aria-pressed="false" aria-label="播放本件器物的语音介绍"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h3l5-4v14l-5-4H4z"/><path d="M16 8.6a5 5 0 0 1 0 6.8"/><path d="M19 6a8.6 8.6 0 0 1 0 12"/></svg><span>听介绍</span><em class="vb-wave" aria-hidden="true"><i></i><i></i><i></i></em></button></h1>
         <p class="label-quote">「它曾随船，走过一整个海。」</p>
         <dl class="spec">
           <dt>材质</dt><dd>德化白瓷 · 象牙白釉</dd>
@@ -891,7 +907,7 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
       </div>
       <aside class="label">
         <p class="label-idx">器物 06 · 灯具</p>
-        <h1>照夜 · 通花皮灯</h1>
+        <h1>照夜 · 通花皮灯<button class="voice-btn" type="button" data-voice="lamp" aria-pressed="false" aria-label="播放本件器物的语音介绍"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h3l5-4v14l-5-4H4z"/><path d="M16 8.6a5 5 0 0 1 0 6.8"/><path d="M19 6a8.6 8.6 0 0 1 0 12"/></svg><span>听介绍</span><em class="vb-wave" aria-hidden="true"><i></i><i></i><i></i></em></button></h1>
         <p class="label-quote">「光从镂空里走出来，纹样就成了影子。」</p>
         <dl class="spec">
           <dt>材质</dt><dd>薄胎白瓷 · 通花镂雕</dd>
@@ -1937,6 +1953,7 @@ figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.7}
     VIEWS.forEach(function (v) { v.classList.remove('is-on'); });
     WORKS.forEach(function (w) { w.classList.remove('is-on'); });
     stopStage();
+    if (typeof stopVoice === 'function') stopVoice();
 
     if (page === 'work') {
       navKey = 'gallery';
@@ -2444,6 +2461,79 @@ function stop() {
 }
 
 window.STAGE3D = { ok: ok, show: show, stop: stop };
+  /* ---------- 语音介绍 ---------- */
+  var VOICE_TEXT = {
+    yuebai: '器物一，叠羽，白瓷人偶。象牙白质，涩口素面，翎羽薄的地方可以透光。分段塑形，羽片逐片叠压贴接，一次烧成。通高四十二厘米，裙裾展开十八厘米。羽衣不飞，只把风留在褶里。',
+    guanyin: '器物二，延平，郑成功瓷塑。象牙白瓷，素胎不施釉。人像与鞍马分别塑形，同窑烧成后合座。通高四十六厘米，人像连马宽二十八厘米。一人一马停在风起处，船还没开。',
+    censer: '器物三，暗香，三足香炉。德化白瓷，足端局部落灰。三足模印成型，柴烧一窑约五十到六十小时。口径十一厘米，高九厘米。烟是看得见的时间。',
+    flower: '器物四，惊鸿，凤凰弓。象牙白瓷，通体素面，翎羽薄到可以透光。分段塑形，羽片逐片贴接后一次烧成。通高四十八厘米，展翼宽二十六厘米。弓不开，只把凤凰留在弦上。',
+    vase: '器物五，潮音，海丝梅瓶。德化白瓷，象牙白釉。拉坯成型，浮雕浅刻海浪与远帆。高二十六厘米，腹径十三厘米。它曾随船，走过一整个海。',
+    lamp: '器物六，照夜，通花皮灯。薄胎白瓷，通花镂雕。薄胎修坯后镂雕缠枝莲纹，透光呈暖白。高二十四厘米，罩径十五厘米。光从镂空里走出来，纹样就成了影子。'
+  };
+
+  var speakingId = null;
+
+  function voiceBtns() { return document.querySelectorAll('.voice-btn'); }
+
+  function stopVoice() {
+    if (speakingId) { try { window.speechSynthesis.cancel(); } catch (e) {} }
+    speakingId = null;
+    voiceBtns().forEach(function (b) {
+      b.classList.remove('is-on');
+      b.setAttribute('aria-pressed', 'false');
+      var s = b.querySelector('span');
+      if (s) s.textContent = '听介绍';
+    });
+  }
+
+  function voiceFlash(btn, msg) {
+    var s = btn.querySelector('span');
+    if (!s) return;
+    s.textContent = msg;
+    setTimeout(function () { if (!btn.classList.contains('is-on')) s.textContent = '听介绍'; }, 2200);
+  }
+
+  function speakWork(id, btn) {
+    if (!('speechSynthesis' in window) || typeof window.SpeechSynthesisUtterance !== 'function') {
+      voiceFlash(btn, '此设备不支持'); return;
+    }
+    if (speakingId === id) { stopVoice(); return; }
+    stopVoice();
+    var txt = VOICE_TEXT[id];
+    if (!txt) return;
+    var u = new SpeechSynthesisUtterance(txt);
+    u.lang = 'zh-CN';
+    u.rate = 0.96;
+    u.pitch = 1;
+    var voices = window.speechSynthesis.getVoices() || [];
+    var zh = voices.filter(function (v) { return /^zh|Chinese|中文|普通话/i.test((v.lang || '') + ' ' + (v.name || '')); });
+    zh.sort(function (a, b) {
+      var score = function (v) { return /Xiaoxiao|Yunxi|Yaoyao|Tingting|Huihui|Google|Mandarin/i.test(v.name || '') ? 1 : 0; };
+      return score(b) - score(a);
+    });
+    if (zh[0]) u.voice = zh[0];
+    u.onend = function () { if (speakingId === id) stopVoice(); };
+    u.onerror = function () { if (speakingId === id) { stopVoice(); voiceFlash(btn, '播放失败'); } };
+    speakingId = id;
+    btn.classList.add('is-on');
+    btn.setAttribute('aria-pressed', 'true');
+    var s = btn.querySelector('span');
+    if (s) s.textContent = '停止';
+    try { window.speechSynthesis.cancel(); } catch (e) {}
+    window.speechSynthesis.speak(u);
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target && e.target.closest ? e.target.closest('.voice-btn') : null;
+    if (!btn) return;
+    e.preventDefault();
+    speakWork(btn.getAttribute('data-voice'), btn);
+  });
+
+  if ('speechSynthesis' in window && window.speechSynthesis.onvoiceschanged !== undefined) {
+    window.speechSynthesis.onvoiceschanged = function () {};
+  }
+
 window.dispatchEvent(new Event('s3-ready'));
 </script>
 </body>
